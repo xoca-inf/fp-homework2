@@ -36,3 +36,4 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - hw2
+
