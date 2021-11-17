@@ -25,7 +25,6 @@ wrapState a = S $ \s -> (a :# s)
 
 joinState :: State s (State s a) -> State s a
 joinState (S f) = S $ \s -> let ((S a) :# e) = f s in a e
-joinState = undefined
 
 modifyState :: (s -> s) -> State s ()
 modifyState func = S $ \s -> () :# func s
